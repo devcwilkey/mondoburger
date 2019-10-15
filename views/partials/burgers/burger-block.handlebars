@@ -1,0 +1,8 @@
+<li class="list-group-item d-flex justify-content-between align-items-centers">
+	{{id}}). {{burger_name}}
+
+	{{#if devoured}}
+	{{else}}
+		<button type="button" class="devour-burger btn btn-success"data-id="{{id}}" data-devoured="true">Devour It!</button>
+	{{/if}}
+</li>

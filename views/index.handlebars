@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+                <h2>Burgers to Devour</h2>
+                <ul class="list-group">
+                {{#each burgers}}
+                    {{#unless devoured}}
+                        {{> burgers/burger-block devoured=false}}
+                    {{/unless}}
+                {{/each}}
+                </ul>
+        </div>
+        <div class="col-6">
+            <h2>Devoured Burgers</h2>
+            <ul class="list-group">
+            {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block devoured=true}}
+                {{/if}}
+            {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h2>Add a Burger to the Devour List</h2>
+            <form class="create-burger">
+            <div class="form-group">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Burger Name:</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="burger" name="burger_name" placeholder="Enter the Name of a Burger to Devour">
+                </div>
+            </div>
+            <button type="submit">Add Burger</button>
+            </form>
+        </div>
+    </div>
+</div>
