@@ -10,7 +10,6 @@ function printQuestionMarks(num) {
 
 function objToSql(ob) {
     var arr = [];
-  
     for (var key in ob) {
         var value = ob[key];
         if (Object.hasOwnProperty.call(ob, key)) {
@@ -46,8 +45,6 @@ var orm = {
         queryString += "VALUES (";
         queryString += printQuestionMarks(value.length);
         queryString += ") ";
-        
-        console.log(queryString);
 
         connection.query(queryString, value, function(err, result) {
             if (err) throw err;
@@ -60,8 +57,6 @@ var orm = {
         queryString += " SET ";
         queryString += objToSql(objColVals);
         queryString += " WHERE " + condition;
-
-        console.log(queryString);
 
         connection.query(queryString, function(err, result) {
             if (err) throw err;

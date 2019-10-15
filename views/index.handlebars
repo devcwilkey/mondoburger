@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-6">
+        <div class="col-6 text-center">
                 <h2>Burgers to Devour</h2>
                 <ul class="list-group">
                 {{#each burgers}}
@@ -10,7 +10,7 @@
                 {{/each}}
                 </ul>
         </div>
-        <div class="col-6">
+        <div class="col-6 text-center">
             <h2>Devoured Burgers</h2>
             <ul class="list-group">
             {{#each burgers}}
@@ -21,14 +21,14 @@
             </ul>
         </div>
     </div>
-    <div class="row pt-3">
-        <div class="col-12">
+    <div class="row mt-2 pt-4">
+        <div class="col-12 text-center">
             <h2>Add a Burger to the Devour List</h2>
             <form class="create-burger">
             <div class="form-group">
                 <div class="input-group input-group-md mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-md">Burger Name:</span>
+                        <span class="input-group-text strong" id="inputGroup-sizing-md">Burger Name:</span>
                     </div>
                     <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-md" id="burger" name="burger_name" placeholder="Enter the Name of a Burger to Devour">
                     <div class="input-group-append">
