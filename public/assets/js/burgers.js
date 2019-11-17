@@ -16,7 +16,7 @@ $(function() {
         function() {
           console.log("Ate Da Burger", eatBurger);
           // Reload the page to get the updated list
-          location.reload();
+          location.reload(true);
         }
       );
     });
@@ -32,7 +32,7 @@ $(function() {
       }).then(
         function() {
           console.log("Created da Burger!");
-          location.reload();
+          location.reload(true);
         }
       );
     });
